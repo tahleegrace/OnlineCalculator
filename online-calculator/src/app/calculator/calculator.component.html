@@ -1,0 +1,15 @@
+<ng-container *ngIf="!isLoading">
+  <div id="calculator" class="container">
+    <div class="row">
+      <div *ngFor="let operation of operations">
+        <button class="btn" [title]="operation.description">{{ operation.symbol }}</button>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="isLoading">
+  <div class="container">
+    Loading calculator. Please wait ...
+  </div>
+</ng-container>
