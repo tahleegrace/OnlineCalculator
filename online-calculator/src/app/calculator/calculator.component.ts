@@ -13,6 +13,7 @@ export class CalculatorComponent implements OnInit {
   public isLoading: boolean = true;
 
   public operations: Operation[];
+  public numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
   constructor(private calculatorService: CalculatorService) { }
 

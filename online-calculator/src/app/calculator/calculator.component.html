@@ -5,6 +5,11 @@
         <button class="btn" [title]="operation.description">{{ operation.symbol }}</button>
       </div>
     </div>
+    <div class="row">
+      <div *ngFor="let number of numbers">
+        <button class="btn" [title]="number">{{ number }}</button>
+      </div>
+    </div>
   </div>
 </ng-container>
 
