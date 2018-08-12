@@ -1,13 +1,21 @@
 <ng-container *ngIf="!isLoading">
   <div id="calculator" class="container">
     <div class="row">
+      <div class="col-sm-12">
+        <input type="text" class="form-control" readonly />
+      </div>
+    </div>
+    <div class="row">
       <div *ngFor="let operation of operations">
-        <button class="btn" [title]="operation.description">{{ operation.symbol }}</button>
+        <button class="btn" [title]="operation.description" (click)="calculatorStateService.addOperand(operation)">{{ operation.symbol }}</button>
+      </div>
+      <div>
+        <button class="btn" title="=">=</button> <!-- TODO: Implement the equals button. -->
       </div>
     </div>
     <div class="row">
       <div *ngFor="let number of numbers">
-        <button class="btn" [title]="number">{{ number }}</button>
+        <button class="btn" [title]="number" (click)="calculatorStateService.addOperand(number)">{{ number }}</button>
       </div>
     </div>
   </div>

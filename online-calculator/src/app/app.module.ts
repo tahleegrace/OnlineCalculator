@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { CalculatorService } from './service/calculator.service';
+import { CalculatorStateService } from './service/calculator-state.service';
 
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './calculator/calculator.component';
@@ -19,7 +20,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
     FormsModule
   ],
   providers: [
-    CalculatorService
+    CalculatorService,
+    CalculatorStateService
   ],
   bootstrap: [AppComponent]
 })
